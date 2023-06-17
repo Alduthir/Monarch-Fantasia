@@ -7,28 +7,11 @@ public class PlayerController : MonoBehaviour
     public float movementSpeed = 20;
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (movementTarget && transform.parent is null)
         {
             MoveTowardsTarget();
-        }
-    }
-
-    void MoveTowardsTarget()
-    {
-        Vector2 position = transform.position;
-        Vector2 targetPosition = movementTarget.transform.position;
-        transform.position = Vector2.MoveTowards(
-            position,
-            targetPosition, 
-            movementSpeed * Time.deltaTime
-            );
-        
-        if (position == (Vector2)movementTarget.transform.position)
-        {
-            transform.parent = movementTarget.transform;
-            SetGravity();
         }
     }
 
@@ -42,6 +25,23 @@ public class PlayerController : MonoBehaviour
         else
         {
             body.simulated = true;
+        }
+    }
+    
+    private void MoveTowardsTarget()
+    {
+        Vector2 position = transform.position;
+        Vector2 targetPosition = movementTarget.transform.position;
+        transform.position = Vector2.MoveTowards(
+            position,
+            targetPosition, 
+            movementSpeed * Time.deltaTime
+            );
+        
+        if (position == (Vector2)movementTarget.transform.position)
+        {
+            transform.parent = movementTarget.transform;
+            SetGravity();
         }
     }
 }
