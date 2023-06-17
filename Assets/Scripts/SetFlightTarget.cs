@@ -12,15 +12,13 @@ public class SetFlightTarget : MonoBehaviour
             player.transform.parent = null;
             controller.SetGravity();
         }
+
         RotateToTarget(player.transform);
     }
-    
+
     private void RotateToTarget(Transform player)
     {
-        float angle = Mathf.Atan2(
-             transform.position.y, 
-             transform.position.x
-        );
-        player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Quaternion angle = Quaternion.LookRotation(Vector3.forward, transform.position - player.transform.position);
+        player.transform.rotation = angle;
     }
 }

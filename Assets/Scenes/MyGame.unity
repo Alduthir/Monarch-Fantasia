@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4455276702467175431, guid: 252ac4ddcd40a7d48afb85daa90d7dbb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4977640228133563683, guid: 252ac4ddcd40a7d48afb85daa90d7dbb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -177,6 +181,10 @@ PrefabInstance:
     - target: {fileID: 4977640228133563693, guid: 252ac4ddcd40a7d48afb85daa90d7dbb, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7053725080319328620, guid: 252ac4ddcd40a7d48afb85daa90d7dbb, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 252ac4ddcd40a7d48afb85daa90d7dbb, type: 3}
@@ -442,11 +450,11 @@ MonoBehaviour:
   - {fileID: 7813485169613713754, guid: 5e8da24d6bf07d84c9a17b2d5e029a7a, type: 3}
   obstacles:
   - {fileID: 3035349318724004316, guid: be4112e7ac1e5934489ca3504e5aa934, type: 3}
-  minSpawnBound: -15
-  maxSpawnBound: 15
+  minSpawnBound: -12
+  maxSpawnBound: 12
   spawnYPosition: 8
-  flowerMinSpawnTime: 0.5
-  flowerMaxSpawnTime: 3
+  flowerMinSpawnTime: 0.2
+  flowerMaxSpawnTime: 2
   obstacleMinSpawnTime: 1
   obstacleMaxSpawnTime: 2
 --- !u!4 &1003227866
